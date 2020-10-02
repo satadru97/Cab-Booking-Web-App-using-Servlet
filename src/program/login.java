@@ -37,7 +37,7 @@ public class login extends HttpServlet {
 			ResultSet rs = ps.executeQuery();
 			if(rs.next()){
 				RequestDispatcher rd = request.getRequestDispatcher("home.html");
-				out.println("<font color='yellow'>Welcome "+rs.getString("UNAME")+"</font>");
+				out.println("<font color='green'>Welcome "+rs.getString("UNAME")+"</font>");
 				HttpSession sess = request.getSession();
 				sess.setAttribute("uid", uid);
 				rd.include(request, response);
